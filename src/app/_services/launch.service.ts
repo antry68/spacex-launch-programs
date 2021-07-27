@@ -14,23 +14,23 @@ export class LaunchService {
 
   launches(): Observable<Source> {
     return this.http
-      .get<Source>("https://api.spaceXdata.com/v3/launches?limit=100")
+      .get<Source>("http://api.spaceXdata.com/v3/launches?limit=100")
       .pipe(map((res: any) => res));
   }
 
   launchesSuccess(launchSuccess:any): Observable<Source> {
     return this.http
-    .get<Source>( "https://api.spaceXdata.com/v3/launches?limit=100&launch_success="+launchSuccess)
+    .get<Source>( "http://api.spaceXdata.com/v3/launches?limit=100&launch_success="+launchSuccess)
     .pipe(map((res: any) => res));
   }
   launchesLandSuccess(landSuccess:any): Observable<Source> {
     return this.http
-      .get<Source>( "https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success="+landSuccess)
+      .get<Source>( "http://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success="+landSuccess)
       .pipe(map((res: any) => res));
   }
   launchesLandSuccessYear(launchYear:any): Observable<Source> {
     return this.http
-      .get<Source>( "https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=true&launch_year="+launchYear)
+      .get<Source>( "http://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=true&launch_year="+launchYear)
       .pipe(map((res: any) => res));
   }
 }
