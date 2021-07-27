@@ -1,0 +1,27 @@
+<div id="filterarea" style="margin-left: 10px;">
+  <div class="card col s12 m2 " >
+    <h5><b>{{title}}</b></h5>
+    <div class="center">
+      Launch Year
+      <hr>
+      <span *ngFor="let filter of FilterArray">
+        <button (click)="ButtonClickHandlerLaunchLandYear(filter)" >{{filter}}</button>
+    </span>
+    </div>
+
+    <div class="center row">
+      Successful Launch
+      <hr>
+      <button (click)="ButtonClickHandlerLaunch(true)" class="left">True</button>
+      <button (click)="ButtonClickHandlerLaunch(false)" class="right">False</button>
+    </div>
+
+    <div class="center row">
+      Successful Landing
+      <hr>
+      <button (click)="ButtonClickHandlerLaunchLand(true)" class="left">True</button>
+      <button (click)="ButtonClickHandlerLaunchLand(false)" class="right">False</button>
+    </div>
+  </div>
+
+</div>

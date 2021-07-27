@@ -1,0 +1,10 @@
+<div>
+<h5><b>{{ title }}</b></h5>
+<br>
+<div class="row" >
+
+  <app-filterarea></app-filterarea>
+  <launch-item-container *ngFor="let launch of launches" [launch]="launch"></launch-item-container></div>
+
+<footer style="text-align: center; margin-bottom:10px"><h5><b>Developed By: {{developer_name}}</b></h5></footer>
+</div>

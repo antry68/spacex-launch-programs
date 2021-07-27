@@ -1,0 +1,16 @@
+<div class="right card-deck" >
+      <div class="card" >
+        <div class="card-image">
+          <img src="{{ launch.links.mission_patch}}" alt="{{ launch.mission_name }}">
+        </div>
+          <div class="card-content">
+            <span class="card-title"><b>{{ launch.mission_name }} #{{ launch.flight_number }} </b></span>
+            <ul *ngFor="let mission_id of launch.mission_id" class="card-title"><b>Mission Ids:</b>
+              <li>{{mission_id}}</li>
+            </ul>
+            <span class="card-text"><b>Launch Year:</b>{{ launch.launch_year }} </span><br>
+            <span class="card-text"><b>Successful Launch:</b>{{ launch.launch_success }} </span><br>
+            <span class="card-text"><b>Successful Landing:</b>{{ launch.rocket.first_stage.cores[0].land_success}} </span>
+          </div>
+      </div>
+    </div>
